@@ -17,6 +17,7 @@ dependencies = [
     "modelscope>=1.40.2",
     "numpy>=2.5.3",
     "openai-agents>=0.24.0",
+    "pathlib>=1.0.1",
     "pymilvus[model]>=3.0.2",
     "pymongo>=4.18.2",
     "python-dotenv>=1.2.4",

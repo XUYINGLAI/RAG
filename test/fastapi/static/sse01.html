@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>SSE案例01</h1>
+    <button id = "btn">发送请求给后端，制造邮件</button>
+    <div id="content" ></div>
+
+    <script>
+        const btn=document.getElementById('btn')
+        btn.onclick=async function(){
+            const res = await fetch("http://localhost:8000/sse01?session_id=123")
+            const data = await res.json()
+            console.log(data)
+
+
+            // sse建立长连接 底层发送了请求
+            es = new EventSource("http://localhost:8000/handersse01?session_id=123")
+
+            // 前端接收数据，流式，做事件监听
+            es.onmessage=function (e){
+                console.log(e.data)
+
+                // document.getElementById('content').innerHTML+=e.data+'<br/>'
+                if(e.data!=='None'){
+                       document.getElementById('content').innerHTML+=e.data+'<br/>'
+                }else{
+                    es.close()
+                }
+            }
+
+
+        }
+
+    </script>
+
+</body>
+</html>

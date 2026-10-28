@@ -137,9 +137,9 @@ class NodeDocumentSplit(NodeBase):
 
         # 为了下一个节点的单元测试
         # 存储为json文件
-        with open(r"D:\output\hak180产品安全手册\chunks.json",'w',encoding="utf-8") as f:
-            # f.write("".join_format(final_chunk_list))
-            json.dump(final_chunk_list,f,ensure_ascii=False,indent=4)
+        # with open(r"D:\output\hak180产品安全手册\chunks.json",'w',encoding="utf-8") as f:
+        #     # f.write("".join_format(final_chunk_list))
+        #     json.dump(final_chunk_list,f,ensure_ascii=False,indent=4)
 
 
         return{

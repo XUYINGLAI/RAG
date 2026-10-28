@@ -154,8 +154,8 @@ class NodeItemNameRecognition(NodeBase):
         for chunk in chunks:# chunks列表在堆中的地址没有变,不过是里面的每个字典数据变了
             chunk["item_name"]=item_name
 
-        with open(r"D:\output\hak180产品安全手册\chunks_item_name.json", "w", encoding="utf-8") as f:
-            f.write(json_format(chunks))
+        # with open(r"D:\output\hak180产品安全手册\chunks_item_name.json", "w", encoding="utf-8") as f:
+        #     f.write(json_format(chunks))
 
 
         return {

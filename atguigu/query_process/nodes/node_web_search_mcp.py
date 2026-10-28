@@ -43,7 +43,7 @@ class NodeWebSearchMcp(NodeBase):
              for item in data
         ]
         return {
-            "web_search":chunks,
+            "web_search_docs":chunks,
         }
 
 

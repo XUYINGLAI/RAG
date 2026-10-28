@@ -109,10 +109,10 @@ class NodeItemNameConfirm(NodeBase):
             # todo 商品对齐，设置一个阈值，对score筛选
             confirm_item_names=[item.get("search_item_name")
                                 for item in search_item_name_list
-                                if item.get("score")>=0.85 ]
+                                if item.get("score")>=0.80 ]
             option_item_names=[item.get("search_item_name")
                                for item in search_item_name_list
-                               if item.get("score")<0.85 and item.get("score")>=0.6]
+                               if item.get("score")<0.80 and item.get("score")>=0.6]
 
             if confirm_item_names:
                 # 有可以确定的名字

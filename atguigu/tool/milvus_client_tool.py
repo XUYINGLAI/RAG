@@ -3,6 +3,7 @@
 @Date:2026/10/16
 @DESC:
 """
+import os
 from pymilvus import MilvusClient, AnnSearchRequest, WeightedRanker
 from atguigu.config.config import MilvusConfig
 
